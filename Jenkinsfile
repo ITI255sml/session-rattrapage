@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Sonar') {
             steps {
-               sh ''
+               sh 'mvn sonar:sonar -Dsonar.projectKey=ExamThourayaS2 -Dsonar.host.url=http://192.168.146.126:9000 -Dsonar.login=2abbb0fe49e296cade42fb7651cefd0ef5ccc809'
             }
         }
         stage('Package') {
